@@ -23,8 +23,8 @@ pipeline {
         stage("test"){
             when {
                 expression {
-                //env.BRANCH_NAME="main" 
-                params.executeTests==true
+                env.BRANCH_NAME="main" 
+                //params.executeTests==true
                 }
             }
             steps {
