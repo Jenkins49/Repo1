@@ -1,13 +1,17 @@
 
 pipeline {
     agent {node {label "Slave1"}}
+    environment {
+    NEW_VERSION = '1.3.0'
+    }
     
     stages {
         stage("build"){
             steps {
             echo "This is Build stage"
             echo "Branch_name" +env.BRANCH_NAME  
-            echo "Node Name :- "+env.NODE_NAME    
+            echo "Node Name :- "+env.NODE_NAME 
+            echo "Building version :- ${NEW_VERSION}"    
 }
             
         }
