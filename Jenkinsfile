@@ -27,4 +27,9 @@ pipeline {
             
         }
     }
+    post {
+        always{echo "I am always in post action"}
+        success{echo "I am success in post action"}
+        failure{echo "I am failure in post action"}
+    }   
 }
