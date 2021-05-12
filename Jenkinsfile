@@ -11,7 +11,8 @@ pipeline {
             echo "This is Build stage"
             echo "Branch_name" +env.BRANCH_NAME  
             echo "Node Name :- "+env.NODE_NAME 
-            echo "Building version :- ${NEW_VERSION}"    
+            echo "Building version :- ${NEW_VERSION}"   
+            echo 'Building version :- ${NEW_VERSION}'
 }
             
         }
