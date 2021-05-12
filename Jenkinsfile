@@ -2,22 +2,28 @@ pipeline {
     agent {node {label "Slave1"}}
     
     stages {
-        stage("Build"){
+        stage("Build project1"){
             steps {
-            echo "Execute the Build job in pipelinetwo"
-            echo " Build:- this is the file executing from jenkins file o the github"}
+            echo "This is Build project1"
+            build project1}
             
         }
-        stage("Code"){
+        stage("Build Project2"){
             steps {
-            echo "Execute the Code job in pipelinetwo"
-            echo "Code :-this is the file executing from jenkins file  the github"}
+            echo "This is Build project2"
+            build project2 }
             
         }
-        stage("Test"){
+        stage("Build project3"){
             steps {
-            echo "Execute the Test job in pipelinetwo"
-            echo "Test :- this is the file executing from jenkins file  the github"}
+            echo "This is Build project3"
+            build project3 }
+            
+        }
+        stage("Build Project3"){
+            steps {
+            echo "This is Build project4"
+            build project4 }
             
         }
     }
