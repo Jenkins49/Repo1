@@ -2,27 +2,27 @@ pipeline {
     agent {node {label "Slave1"}}
     
     stages {
-        stage("Build project1"){
+        stage("build"){
             steps {
-            echo "This is Build project1"
+            echo "This is Build stage"
 }
             
         }
-        stage("Build Project2"){
+        stage("test"){
             steps {
-            echo "This is Build project2"
+            echo "This is test stage"
  }
             
         }
-        stage("Build project3"){
+        stage("deploy"){
             steps {
-            echo "This is Build project3"
+            echo "This is deploy"
 }
             
         }
-        stage("Build Project3"){
+        stage("monitor"){
             steps {
-            echo "This is Build project4"
+            echo "This is monitor"
                
 }
             
