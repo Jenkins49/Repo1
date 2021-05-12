@@ -6,7 +6,8 @@ pipeline {
         stage("build"){
             steps {
             echo "This is Build stage"
-            echo "Branch_name" +env.BRANCH_NAME    
+            echo "Branch_name" +env.BRANCH_NAME  
+            echo "Node Name :- "+env.NODE_NAME    
 }
             
         }
