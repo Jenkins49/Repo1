@@ -1,14 +1,25 @@
+CODE_CHANGES = getGitChanges()
 pipeline {
     agent {node {label "Slave1"}}
     
     stages {
         stage("build"){
+            when {
+                expression {
+                BRANCH_NAME="dev" || CODE_CHANGES=true
+                }
+            }
             steps {
             echo "This is Build stage"
 }
             
         }
         stage("test"){
+            when {
+                expression {
+                BRANCH_NAME="main" || BRANCH_NAME="dev"
+                }
+            }
             steps {
             echo "This is test stage"
  }
