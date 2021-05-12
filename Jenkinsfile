@@ -23,6 +23,7 @@ pipeline {
         stage("Build Project3"){
             steps {
             echo "This is Build project4"
+                build job1
 }
             
         }
