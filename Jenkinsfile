@@ -2,12 +2,12 @@
 pipeline {
     agent {node {label "Slave1"}}
     environment {
-    NEW_VERSION = '1.3.0'
-        parameters {
-        choice(name:'VERSION',choices: ['1.0','1.1','1.2'],description: '')
-        booleanParam(name:'executeTests',defaultValue:true, description:'')    
+        NEW_VERSION = '1.3.0' }
+    parameters {
+     choice(name: 'VERSION',choices: ['1.0','1.1','1.2'],description: '')
+     booleanParam(name: 'executeTests',defaultValue: true, description: '')    
         }    
-    }
+    
     
     stages {
         stage("build"){
